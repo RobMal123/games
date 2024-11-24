@@ -17,6 +17,12 @@ CYAN = "\033[36m"
 RESET = "\033[0m"
 
 while True:
+    if player_count == 5:
+        print(f"{GREEN}Du vann grattis! den här spelomgången e nu slut. {RESET}")
+        break
+    elif computer_count == 5:
+        print(f"{RED}Du förlorade försök igen, den här spelomgången e nu slut{RESET}")
+        break
     computer = options[randint(0, 2)]
     print(f"{CYAN}Spelares poäng: {player_count}{RESET}")
     print(f"{CYAN}Dators poäng: {computer_count}{RESET}")
